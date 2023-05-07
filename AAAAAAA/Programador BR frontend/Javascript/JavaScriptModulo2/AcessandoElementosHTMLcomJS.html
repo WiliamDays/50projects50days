@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Acessando elementos HTML com JS</title>
+    <style>
+        .paragrafo{
+            color: red;
+        }
+    </style>
+</head>
+<body>
+    <h1>Título</h1>
+    <p class="paragrafo" id="p1" nome="Wiliam">Parágrafo 1</p>
+    <p class="paragrafo" >Parágrafo 2</p>
+    <p>Parágrafo 3</p>
+    <script>
+        //PEGAR ELEMENTOS PELA ID
+        let p1 = document.getElementById("p1") //Vai pegar o elemento da id p1 (toda TAG) transformar em um objeto e jogar em uma variável 
+        //Atráves do getElementById você pode acessar qualquer elemento no caso acima vai acessar uma tag p. Utiliza ele pq se usasse o document.body.p não daria certo
+
+        //PEGAR ELEMENTOS PELA CLASSE
+        let paragrafo = document.getElementsByClassName("paragrafo") //Vai criar um array com todos os elementos que tem paragrafo
+        
+        //PEGAR ELEMENTO PELA TAG 
+        let tag = document.getElementsByTagName("p")
+
+
+
+
+    </script>
+</body>
+</html>

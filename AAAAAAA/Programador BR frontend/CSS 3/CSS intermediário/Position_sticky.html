@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta lang="Pt-BR">
+        <title>Posição sticky</title>
+        <style>
+            .quadro{
+                width:500px;
+                height:4000px;
+                border: 1px solid gray
+            }
+            .quadradovermelho{
+                background-color: red;
+            }
+            .quadradoverde{
+                background-color: green;
+                position: sticky;
+                width: 100%;
+            }
+            .quadradoazul{
+                background-color: blue;
+            }
+            .quadrado{
+                width: 100px;
+                height: 100px;
+            }
+        </style>
+    </head> 
+    <body>
+        <div class="quadrado quadradoverde"></div>
+        <div class="quadro">
+            <div class="quadrado quadradovermelho"></div>
+            <div class="quadrado quadradoazul"></div>
+        </div>
+    </body>

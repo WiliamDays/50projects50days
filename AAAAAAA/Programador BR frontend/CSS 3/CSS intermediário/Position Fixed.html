@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta lang="Pt-BR">
+        <title>Posição fixa</title>
+        <style>
+            .quadro{
+                width:500px;
+                height:4000px;
+                border: 1px solid gray
+            }
+            /*mesmo com a barra de rolagem que foi criada o posicionamento do elemento continua o mesmo pois ele é fixo*/
+            .quadradovermelho{
+                background-color: red;
+            }
+            .quadradoverde{
+                background-color: green;
+                position: fixed; 
+                right: 0px;
+                bottom: 500px;
+            }
+            .quadradoazul{
+                background-color: blue;
+            }
+            .quadrado{
+                width: 100px;
+                height: 100px;
+            }
+            /*O posicionamento fixo será sempre em ralação a janela*/
+        </style>
+    </head> 
+    <body>
+        <div class="quadro">
+            <div class="quadrado quadradovermelho"></div>
+            <div class="quadrado quadradoazul"></div>
+            <div class="quadrado quadradoverde"></div>
+            <!--Se restar alguma dúvida da execução da posicion fixed e sticky, é só executar-->
+            <!--A diferença do fixed para o sticky, no styky segue o fluxo normal da aplicação(como na barra de rolagem por exemplo) e ele vai ficar fixo na tela apenas quando atingir a borda da janela. já o fixed nn segue fluxo da aplicação fica fixo em um lugar e não sai mais-->
+            <!--Outra diferença é que no fixed assim como o absoluto é como se os elementos vizinhos não o reconhecesse (como se estivesse em um nível superior) enquanto no sticky todos os elementos vizinhos respeitam seu espaço-->
+        </div>
+    </body>

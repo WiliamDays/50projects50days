@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Video</title>
+    <style>
+        .container{
+            position: relative;
+            width: 640px;
+            height: 360px;
+        }
+
+        .video{
+            width: 100%;
+            height: 100%;
+        }
+
+        .controle{
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            top: 0;
+        }
+    </style>
+</head>
+<body>
+    <!--<video preload="" controls autoplay muted loop src="caminho do video" width="300" poster="./caminhodaimagem"> Aqui o vídeo já foi criado, mas se estiver sem o atributo controls não tem como dar o play nem fazer nada nesse video-->
+    <!--Já a tag autoplay é possível colocar o vídeo para começar a rodar sozinho quando a página carregar-->
+    <!--Com muted o vídeo começa sem som, em alguns navegadores para o autoplay funcionar precisa estar com muted ativado-->
+    <!--Com loop toda vez que o vídeo acaba de rodar ele recomeça de novo-->
+    <!--Com poster você escolhe um caminho para servir de thumb do video-->
+    <!--Preload é uma pre ação que o vídeo terá antes de rodar, pode ser auto de carregar o video mesmo sem ter colocado ele para rodar, none que é carregar o video apenas enquanto o video tiver rodando e metadata que carrega apenas informações como duração, dimensões etc-->
+    <div class="container">
+        <video class="video" src="">
+
+        </video>
+
+        <div class="controle">
+            <img src="https://img.freepik.com/icones-gratis/botao-play-arredondado_318-9366.jpg?w=740&t=st=1683389246~exp=1683389846~hmac=e337c87ffcd009308d0fe42474f82b8763f81f62dfa3291e945976805503d004" alt="play" class="play">
+
+        </div>
+    </div>
+</body>
+</html>

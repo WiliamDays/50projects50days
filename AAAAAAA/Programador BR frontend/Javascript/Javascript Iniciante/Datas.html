@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Datas</title>
+</head>
+<body>
+    <script>
+        let d = new Date() //Date é o objeto data. Criou uma nova data do exato momento atual
+        console.log(d) 
+        //No formato padrão passa new Date(year, month, day, hours, minutes, seconds, milliseconds)
+
+        let novaData = (2001, 06, 31) //Aqui foi passada minha data de aniversário (usa-se 06 nos meses porque ele é referente ao indice dos meses que vai de 0 a 11)
+        let novaDataComHorario = (2001, 06, 31, 22, 45) //Foi passada novamente o dia 31/07/2001 só que dessa vez às 22 horas e 45 min
+
+        console.log(new Date(0)) //Esse parâmetro 0 que foi passado vai para o dia 31 de dezembro de 1969 a 21 horas no horário de Brasília, e qualquer valor que for aumentado nesse zero vai ser o valor correpondente em milissegundos dessa data
+
+        let passarDataPorString = new Date("05/20/2020 22:45") //O programa também irá identificar dessa forma (primeiro o mês depois o dia)
+
+        //Métodos do objeto data
+        //Pegar uma data
+        let newDate = new Date(2001, 09, 25)
+        let ano = newDate.getFullYear() //Pega o ano
+        let pegarMes = newDate.getMonth() //Pega o mês (0 janeiro, 11 dezembro)
+        let pegarDia = newDate.getDate() //Pega o dia do mês
+        let pegarDia2 = newDate.getDay() //Pega o dia da semana (0 domingo, 6 sábado)
+        let pegarHoras = newDate.getHours() //Pega a Hora (caso tenha)
+        let pegarMinutos = newDate.getMinutes() //Pega os minutos
+        let pegarSegundos = newDate.getSeconds() //Pega os segundos
+        let pegarMilisegundos = newDate.getMilliseconds() //Pega os Milisegundos
+        let pegarMilisegundosDesde1969 = newDate.getTime() //Pega o valor em milisegundos desde a data 31 de dezembro de 1969 as 21 horas
+
+        //Mudar uma data
+        let mudarAno = newDate.setFullYear(2020) //Muda o ano de newDate para 2020
+        let mudarMes = newDate.setMonth(5) //Muda o mês (abril)
+        let mudarDia = newDate.setDate() //Muda o dia do mês
+        let mudarDia2 = newDate.setDay() //Muda o dia da semana (0 domingo, 6 sábado)
+        let mudarHoras = newDate.setHours() //Muda a Hora (caso tenha)
+        let mudarMinutos = newDate.setMinutes() //Muda os minutos
+        let mudarSegundos = newDate.setSeconds() //Muda os segundos
+        let mudarMilisegundos = newDate.setMilliseconds() //Muda os Milisegundos
+        let mudarMilisegundosDesde1969 = newDate.setTime() //Muda o valor em milisegundos desde a data 31 de dezembro de 1969 as 21 horas
+
+
+
+
+    </script>
+</body>
+</html>

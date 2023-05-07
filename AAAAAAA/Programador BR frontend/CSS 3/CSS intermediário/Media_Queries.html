@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta lang="Pt-BR">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Media queries</title>
+        <style>
+            body{
+                margin: 0px;
+                padding: 0px;
+            }
+           .menu{
+               float: right;
+               list-style: none;
+               margin: 0px;
+               padding: 0px;
+           }
+           .Logo{
+                float: left;
+                color: white;
+           }
+           .header{
+                background-color: #5c57a4;
+                width: 80%;
+                margin: auto;
+                overflow: hidden;
+                padding: 15px;
+                font-size: 18px;
+           }
+
+           li{
+               float: left;
+               color: white;
+               margin-left: 15px;
+           }
+
+           @media screen and (max-width: 700px){
+                .header{
+                    background-color:gray;
+                }
+            }
+            @media screen and (max-width: 500px){
+                .header{
+                    background-color: red;
+                }
+                .Logo{
+                    float: none;
+                    text-align: center;
+                }
+                .menu{
+                    margin-top: 20px;
+                    text-align: center;
+                    float: none;
+                }
+                li{
+                    float: none;
+                    margin-bottom: 5px;
+                    padding: 10px;
+                }
+          }
+           /*media queries serve para fazer estilizações diferentes no elemento de acordo com o tamanho da tela*/
+           /*As configurações do container sempre será herdada, em caso de configuração discordante sobressaira a que estiver por ultimo na ordem de rolagem do código*/
+           /*Desenvolvimento mobile first, vc primeiro cria o codigo para o mobile e faz o media querie adaptando as excessoes para desk top*/
+        </style>
+    </head> 
+    <body>
+        <div class="header">
+            <div class="Logo">
+                Logo
+            </div>
+            <ul class="menu">
+                <li>Home</li>
+                <li>Cursos</li>
+                <li>Contato</li>
+            </ul>
+        </div>
+    </body>

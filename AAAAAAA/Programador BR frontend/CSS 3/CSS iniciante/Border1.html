@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Border</title>
+        <style>
+            .borda {
+                width: 65px;
+                border-style: solid;
+                border-color: blue;
+                border-radius: 10px;
+            }
+            /*Para criar uma borda precisa tanto da width ou height, juntamente ao estilo (o principal é o solid)*/
+            /*border-radius cria uma borda arredonda caso coloque em 50% irá cirar uma borda circular*/
+            /*Border-color muda a cor da borda*/
+
+            /*Borda pontilhada*/ 
+            tag {
+            border-style: dotted
+            }
+
+            /*Traçejado*/
+            tag {
+                border-style: dashed
+                }
+
+            /*Reto*/
+            tag {
+                border-style: solid
+                }
+
+            /*Sem borda*/
+            tag {
+                border-style: none
+                }
+
+            /*Sem borda*/
+            tag {
+                border-style: hidden
+                }
+
+            /*Caso você queira aplicar o efeito desejado em apenas uma parte da borda você tem 4 opções*/
+            tag {
+                border-top-style: none;
+            }
+
+            tag {
+                border-bottom-style: none;
+            }
+
+            tag {
+                border-right-style: none;
+            }
+
+            tag {
+                border-left-style: none;
+            }
+
+            /*Mesma borda com diferentes estilos*/
+            tag {
+                border-color: red blue orange green;
+            }
+            /*Nesse caso vai seguir a ordem top right bottom e left para atribuir as caracteristicas*/
+
+            /*Forma mais simples de criar uma borda*/
+            tag {
+                border: tamanho estilo cor(nessa ordem);
+            }
+        </style>
+    </head>
+    <body>
+        <div class = 'borda'>
+            Conteúdo
+        </div>
+    </body>
+</html>

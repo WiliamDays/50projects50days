@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>background</title>
+        <style>
+            #titulo{
+                background-color: pink;
+            }
+
+            .fundocomimagem{
+                background-image: url(https://i.pinimg.com/originals/eb/e8/4c/ebe84c98b144b175ba3d167071cb0d59.jpg);
+                background-repeat: no-repeat;
+                background-size: cover;
+                font-size: 80px;
+                color: white;
+            }
+
+            /*Muda o fundo da página*/
+            body{
+                background-color: tomato;
+            }
+
+            /*Quando estiver repetindo a imagem de fundo e uma misturando a outra*/
+            Tag, ids ou class {
+                background-repeat: no-repeat;
+            }
+
+            /*Quando estiver repetindo a imagem de fundo e você quiser repitla na horizontal*/
+            Tag, ids ou class {
+                background-repeat: repeat-x;
+            }
+
+            /*Quando estiver repetindo a imagem de fundo e você quiser repitla na vertical*/
+            Tag, ids ou class {
+                background-repeat: repeat-y;
+            }
+
+            /*Cobrir com imagem toda a tag, ou ids (cover que dizer cobrir toda a parte)*/
+            Tag, ids ou class {
+                background-size: cover;
+            }
+
+            /*Ajustar a posição do fundo*/
+            Tag, ids ou class {
+                background-position: center;
+            }
+
+            /*Ajustar barra de rolagem do fundo*/
+            Tag, ids ou class {
+                background-attachment: fixed; /*padrão é o scroll*/
+            }
+            /*Quando for preencher o caminho do arquivo no url caso nao esteja na mesma pasta tem que colocar o caminho completo pode precisar de usar url(../caminho para pasta)*/
+        </style>
+    </head>
+    <Body>
+        <h1 id = 'titulo'>Título com fundo rosa</h1>
+        <p class = 'fundocomimagem'> vai ter um fundo com a imagem desejada no fundo das letras</p>
+    </Body>
+</html>

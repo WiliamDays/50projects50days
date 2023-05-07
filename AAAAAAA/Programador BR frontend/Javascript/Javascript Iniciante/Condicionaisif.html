@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Condições</title>
+</head>
+<body>
+    <script>
+        var idade = 24 //Essa loja não vende bebidas nem para menores de 18, nem para maiores de 70
+        if (idade >= 18 && idade <=70){
+            console.log("Pode comprar bebida")
+            if(idade<= 21){
+                console.log("Envie uma foto da identidade")
+            }
+        }
+        else if(idade < 18){
+            console.log("Não pode, você é menor de idade!")
+        }
+        //var idade = 19 ? console.log("Pode comprar bebida") : console.log("Não pode, você é menor de idade!"), igual a condição de cima, mas usando ternário
+
+        //Operador ternário
+        // condição ? (quer dizer, essa condição é verdadeira? se for, faça....) : (se não, faça....)
+        idade = 26 
+        var pode = idade >= 18? true : false //Com isso eu consigo verificar uma condição e baseado nela colocar um valor ou outro na variável (depois da ? é sempre se o valor retornar VERDADEIRO)
+    </script>
+</body>
+</html>

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Timer e intervalo</title>
+</head>
+<body>
+    <h1>Título</h1>
+    <input onclick="mudarTexto()" type="submit" value="Mudar">
+    <input onclick="parar()" type="submit" value="Parar">
+
+    <script>
+        var n = 0
+        var interval
+
+        function parar(){
+            clearInterval() //para o intervalo
+            clearTimeout() //para o timer
+        }
+
+        function atualizarTexto(){
+            let titulo = document.getElementsByTagName("h1")[0]
+            titulo.innerHTML += " " + n; 
+            n++
+        }
+
+        function mudaCor(){
+            let titulo = document.getElementsByTagName("h1")[0]
+            titulo.style.color = "green"
+        }
+
+        function mudarTexto(){
+            let titulo = document.getElementsByTagName("h1")[0]
+            titulo.innerHTML = "Novo Título"
+
+            setTimeout(mudaCor, 1000) //O que vai fazer e quanto tempo para fazer a transição em milissegundos (1000 milissegundos  = )
+            //setTimeout é um timer que executa apenas 1 vez para executar mais de uma usa-se o setInterval
+
+            interval = setInterval(atualizarTexto, 3000)//3000 milissegundos (3 segundos)
+
+
+
+        }
+    </script>
+</body>
+</html>

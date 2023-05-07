@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="Pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Juntando tudo</title>
+</head>
+<body>
+    
+</body>
+<script>
+    //Lista com nome do aluno separado pela nota 1, nota 2 e a média e no final um valor falando se ele está aprovado ou reprovado
+
+//Váriáveis
+    let nomes = ["Igor", "José", "Maria"]
+    let notas1 = [7.8, 6.5, 9.5]
+    let notas2 = [8.0, 7.0, 8.5]
+
+//Funções
+    function media(n1, n2){
+        return (n1 + n2) / 2
+    }
+
+    function passou(media){
+        if(media < 6){
+            return "Reprovado"
+        }else{
+            return "Aprovado"
+        }
+    }
+
+//Respetições
+    for(let index in nomes){
+        let n1 = notas1[index]
+        let n2 = notas2[index]
+        let m = media(notas1, notas2)
+
+        console.log(`${nomes[index]} - ${notas1[index]} - ${notas2[index]} - ${media(n1, n2)} - ${passou(m)}`)//Está com erro em retornar aprovado ou reprovado
+    }
+
+    /*for(let index in nomes){ Para o índice na variável nome faça:
+
+        console.log(index) (Aqui irá imprimir 0, 1, 2 que são os valores dos indíces da variável nomes)
+
+        console.log(nomes[index]) (Aqui imprimirá o que está escrito em cada indíce da variável nomes)
+
+        console.log(notas1[index]) (Aqui vai imprimir todos os valores dos índices da variável notas1)
+    }*/
+
+
+</script>
+</html>

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Listas HTML</title>
+</head>
+<body>
+    <!--Lista onde a ordem não importa-->
+    <h2>Título da lista(se necessário)</h2>
+    <ul>
+        <li>item 1</li>
+        <li>item 2</li>
+        <li>item 3</li>
+        <li>item 4</li>
+    </ul>
+
+    <!--Lista em cadeia (lista dentro de lista)-->
+    <h2>Título da lista(se necessário)</h2>
+    <ul>
+        <li>item 1</li>
+        <li>item 2</li>
+            <ol tipe ="1" start="3">
+                <li>primeiro item</li>
+                <li>segundo item</li>
+                <li>terceiro item</li>
+                <li>quarto item</li>
+            </ol>
+        <li>item 3</li>
+        <li>item 4</li>
+    </ul>
+    <!--O item dois terá uma sequência de itens dentro-->
+    <!--types: disc, square, ou circle (não é possível usar start)-->
+    
+    <!--Lista onde a ordem importa-->
+    <h2>Título da lista (se necessário)</h2>
+    <ol tipe ="1" start="3">
+        <li>primeiro item</li>
+        <li>segundo item</li>
+        <li>terceiro item</li>
+        <li>quarto item</li>
+    </ol>
+
+    <!--Tipo 1 são números, tipo i são romanos minusculos, tipo I são romanos maiusculos, tipo A são alfabeticos maiusculos e tipo a são alfabetos minusculos-->
+    <!--Start é o valor que você deseja que a lista comece, so funciona em types numericos e romanos-->
+</body>
+</html>

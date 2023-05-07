@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Cores CSS</title>
+        <style>
+            /*botar a cor pelo nome é o mais fácil, porém mais limitado*/
+            h1{
+                color: blue;
+            }
+
+            /*Para ter mais opções pode usar rgb ou rgba (red, green, blue vai de 1 a 255, e o a do rgb que é transparencia q vai de 0 a 1)*/
+            .rgb{
+                color: rgb(0,0,255)
+            }
+
+            .rgba{
+                color: rgba(0,0,255,0.5); /*seria o azul mais claro*/
+            }
+
+            /*Ou pode colocar em hexadecimal tambem*/
+            #hexadecimal{
+                color: #0000FF; /*FF para o r, FF para o g e 00 para o b*/
+            }
+            /*123456789ABCDEF = hexadecimal, F = 15 e FF = 255*/
+        </style>
+    </head>
+    <body>
+        <h1>Título</h1>
+        <h3 class = "rgb">Sub-título em rgb</h3>
+        <h3 class = "rgba">Sub-título em rgba</h3>
+        <p id = "hexadecimal">Paragráfo em hexadecimal</p>
+    </body>
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Const, let e var</title>
+</head>
+<body>
+    <script>
+        var numero1 = 4
+        let numero2 = 5
+        const numero3 = 6
+
+        console.log(numero1)
+        console.log(numero2)
+        console.log(numero3) //Só pode receber o valor uma vez, depois não tem como ser reatribuido (Mas ela pode ser reatribuida)
+
+        const numero4 = {}
+        //numero4 = {nome: "Wiliam"} Aqui dará erro, pois está reatribuindo
+        //numero4.nome = "Wiliam" Aqui já receberia o novo valor
+
+        const numero5 = [4]
+        //numero5 = 3 Aqui daria erro pois está reatribuindo
+        numero5.push(7) //push é um método para adicionar um novo valor em um array. Aqui daria certo pois está adicionando um novo valor e não reatribuindo
+
+
+        //A diferença do var e do let é que o var é de escopo global (uma vez a variável criada ela será reconhecida por todo o programa, mesmo estando num escopo fechado)
+        //Já o let uma vez criado em um escopo local (como em uma função por exemplo), não poderá ser indentificada fora desse escopo
+        //O escopo da const também é local
+    </script>
+</body>
+</html>

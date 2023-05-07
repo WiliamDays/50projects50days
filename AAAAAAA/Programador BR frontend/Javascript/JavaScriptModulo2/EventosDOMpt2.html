@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eventos DOM parte 2</title>
+    <style>
+        button{
+            display: block;
+            border: none;
+            background-color: rgb(46, 199, 250);
+            color: white;
+            width: 100px;
+            height: 25px;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body onload="console.log('Bem vindo! vamos Jogar')"> <!--O evento onload será terminado apenas quando a página terminar de carregar-->
+    <h1 id="titulo">Teste</h1>
+
+    <img src="https://pplware.sapo.pt/wp-content/uploads/2015/08/10-jogos-antigos-e-classicos-que-deixaram-saudade.jpg" width="200px" alt="Jogo">
+    <div>
+        <button onmouseover="changeColor(this)" onmouseout="retornColor(this)">Jogar</button>
+    </div>
+
+    <script>
+        function changeColor(elemento){
+            elemento.style.backgroundColor = "red"
+        }
+
+        function retornColor(elemento){
+            elemento.style.backgroundColor = "rgb(46, 199, 250)"
+        }
+
+        let title = document.getElementById("titulo")
+        title.innerHTML = "Mudar Texto" //Não coloco o parenteses porque se não vai e
+    </script>
+</body>
+</html>

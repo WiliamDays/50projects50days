@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //&& e apenas true && true retornará verdadeiro, true && false, false && true, false && false retornaram em falso
+        //|| ou apenas false || false retornará falso, true || true, false || true, true || false retornaram em verdadeiro
+        //! negative vai negar a ordem logica e invertê-la (verdadeiro vira falso, falso vira verdadeiro)
+        var a = true;
+        var b = false;
+        var c = a && b; //false
+
+        var idade = 35;
+        var maior20 = idade > 20; //true
+        var menor30 = idade < 30; //false
+        //e
+        var entre = maior20 && menor30; //false
+        //ou
+        var entre = maior20 || menor30; //true
+
+        //negative
+        var age = 20;
+        var maior18 = age >= 18 //true porque 20 é maior ou igual a 18 
+        var menor18 = !maior18 //false porque está negando maior18 (é como se estivesse escrito age < 18)
+    </script>
+</body>
+</html>
+
+
+

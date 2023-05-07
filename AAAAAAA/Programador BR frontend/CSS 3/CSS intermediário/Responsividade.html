@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta lang="Pt-BR">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Responsividade</title>
+        <style>
+           /*.header{
+                background-color: gray;
+                height: 100px; Com essa configuração ele já é um pouco responsivo (pois seu width é automaticamente 100%)
+           }*/
+           /*.header{
+                background-color: gray;
+                width: 500px;
+                height: 100px; Com essa configuração ele não é responsivo, pois o elemento não acompanho o tamanho da tela proporcionamente (o tamanho continua o mesmo)
+           }*/
+
+           .header{
+                /*position: relative;*/
+                /*padding: 15px;*/
+                background-color: gray;
+                width: 80%;
+                height: 100px; /*Assim ele já está responsivo, porque o valor em % é responsivo*/
+                margin: auto; /*Como ele estava a esquerda, usei o margin auto para centralizá-lo*/            
+           }
+           
+           /*.content{
+                background-color: blue;
+                height: 100%;
+                width: 100%;
+                margin: auto; Teria que usar um padding, como já usado no elemento pai, para criar um retangulo dentro do retangulo
+           }*/
+            
+           /*.content{
+                position: absolute;
+                background-color: blue;
+                width: 70%;
+                height: 70%;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%); Dessa forma eu teria o elemento centralizado, mas eu precisaria de colocar um relativo no elemento pai
+           }*/
+
+            .content{
+                background-color: blue;
+                height: 70%;
+                width: 70%;
+                margin: auto; /*Para centralizá-lo*/
+                color: white;
+                text-align: center; /*Para centralizar o texto*/
+                font-size: 4vw; /*vw é uma unidade de texto responsiva*/
+           }
+        </style>
+    </head> 
+    <body>
+        <div class="header">
+            <div class="content">
+                Hello world
+            </div>
+        </div>
+    </body>

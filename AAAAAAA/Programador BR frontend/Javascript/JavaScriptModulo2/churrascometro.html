@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Churrascomêtro</title>
+    <style>
+        body{
+            background-color: black;
+            margin: 0%;
+            padding: 0%;
+        }
+        #container{
+            background-color: aliceblue;
+            max-width: 250px;
+            height: 300px;
+            margin: auto;
+            padding: 20px;
+            border-radius: 10px;
+        }
+        h1{
+            text-align: center;
+            font-family: Arial, Helvetica, sans-serif;
+            color: blue;
+        }
+        input{
+            display: block;
+            box-sizing: border-box;
+            width: 100%;
+            margin-bottom: 15px;
+            height: 30px;
+        }
+        button{
+            width: 100%;
+            border: none;
+            box-sizing: border-box;
+            height: 30px;
+            color: white;
+            background-color: blue;
+        }
+    </style>
+</head>
+<body>
+    <section id="container">
+        <header>
+            <h1>Churrascomêtro</h1>
+        </header>
+        <input id="nAdultos" type="number" placeholder="Quantidade de adultos">
+        <input id="nCriancas" type="number" placeholder="Quantidade de crianças">
+        <input id="tChurrasco" type="number" placeholder="Tempo de churrasco">
+        <button onclick="calcular()">Calcular</button>
+        <div id="res">
+
+        </div>
+    </section>
+    <script>
+        /*
+        REGRA DE NEGÓCIO
+        Carne - 400g por pessoa. Mais de 6 horas - 650g
+        Cerveja - 1200ml por pessoa. Mais de 6 horas - 2000ml
+        Refrigerante - 1000 ml por pessoa. Mais de 6 horas - 1500ml
+
+        Crianças valem por 0,5 e não tomam cerveja
+        */
+
+        //Primeira etapa: Linkar todo html ao JS
+        let qtdAdultos = document.getElementById("nAdultos")
+        let qtdChild = document.getElementById("nCriancas")
+        let timeChurras = document.getElementById("tChurrasco")
+        let resultado = document.getElementById("res")
+        //Segunda etapa: Criar o evento e trazê-lo a uma função
+
+        /*
+        PROBLEMA 
+        Pegar os dados de um churrasco e informar a quantidade de carne e bebida necessária 
+
+        ENTRADA 
+        Quantidade de adultos, Quantidade de crianças, duração do churras
+
+        PROCESSAMENTO 
+        Coverter as entradas em quantidade de carne, cerveja e refrigerante
+
+        SAÍDA
+        Informar ao usuário a quantidade de carne, cerveja e refrigerante que ele precisará para fazer o churrasco
+        */
+        function calcular(){
+            let adultos = qtdAdultos.value
+            let criancas = qtdChild.value
+            let duracao = timeChurras.value
+            if (timeChurras.value < 7){
+                let qtdCarne = (400 * adultos) + (200 * criancas)
+                let qtdCerveja = (1200 * adultos)
+                let qtdrefri = (1000 * adultos) + (500 * criancas)
+                resultado.innerHTML = `<p>
+                                       ${qtdCarne/1000}kg de carne. <br>
+                                       ${Math.ceil(qtdCerveja/355)} latas de cerveja. <br>
+                                       ${Math.ceil(qtdrefri/2000)} garrafas de refrigerante.
+                                       </p>`                
+
+            }
+            else{
+                let qtdCarne = (650 * adultos) + (325 * criancas)
+                let qtdCerveja = (2000 * adultos)
+                let qtdrefri = (1500 * adultos) + (750 * criancas)
+                resultado.innerHTML = `<p>
+                                       ${qtdCarne/1000}kg de carne. <br>
+                                       ${Math.ceil(qtdCerveja/355)} latas de cerveja. <br>
+                                       ${Math.ceil(qtdrefri/2000)} garrafas de refrigerante.
+                                       </p>`
+            }
+            
+        }
+
+
+    </script>
+</body>
+</html>

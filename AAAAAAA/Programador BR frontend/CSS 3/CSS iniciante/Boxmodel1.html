@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Box model</title>
+        <style>
+            body{
+                margin: 0;
+                padding: 0;
+                background-color: yellow;
+            }
+
+            .conteiner{
+                background-color: red;
+                padding: 5px;
+                border: 5px solid blue;
+                margin: 5px;
+            }
+
+            .content{
+                background-color: grey;
+                border: 5px solid lightgreen;
+                padding: 5px
+            }
+
+            /*outline Espaço para falar sobre outline*/
+
+            /*body{
+                background-color: lightblue;
+                padding: 0;
+                margin: 0;
+            }
+
+            .content{
+                margin: 20px;
+                background-color: red;
+                border: 2px solid blue;
+            }
+            .container{
+                padding: px;
+                border: lightcoral;
+                background-color: green;
+            }*/
+
+            .quadrado{
+                width: 100px;
+                height: 100px;
+                background-color: purple;
+                border: 10px solid orangered
+            }
+            /*Pode checar que esse elemento aumentou seu tamanho após ser aplicado a borda, esse é um detalhe importantissímo a ser levado em consideração para criar o design da página
+            Aconteceria Esse aumento também se fosse um padding aplicado*/
+
+            .quadrado2{
+                width: 100px;
+                height: 100px;
+                background-color: purple;
+                border: 10px solid orangered;
+                box-sizing: border-box;
+            }
+            /*Nesse de baixo agora o valor do quadrado mesmo com margem ou padding, não poderá passar do tamanho total (100px por 100px)*/
+        </style>
+    </head>
+    <body>
+        <div class = "conteiner">
+            <div class = "content">
+                CONTEÚDO
+            </div>
+        </div>
+        <br><br><br><br>
+        <div class = "quadrado">
+        </div>
+        <br><br><br><br>
+        <div class = "quadrado2">
+        </div>
+    </body>
+</html>

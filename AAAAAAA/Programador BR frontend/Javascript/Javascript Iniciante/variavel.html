@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Variável e tipos de variáveis</title>
+</head>
+<body>
+    <script>
+        /*Variável é uma forma de lidar com dados sem saber exatamente o que ele é (como se fosse uma incognita na matemática)*/
+        /*var a;
+        console.log(a); Assim a variável está indefinida (undefined), não se sabe o que tem dentro*/
+        var a, b;
+        a = "caixaGrande";
+        b = "caixaPequena";
+        b = a
+        console.log(b);
+        /*O programa vai funcionar da seguinte forma: a recebe o valor caixa grande, b recebe caixap pequena, mas após o b receber o a ele se torna caixa grande. Por isso a ordem do código é muito importante, se
+        a = "caixaGrande";
+        b = a
+        b = "caixaPequena";
+        console.log(b); O b estaria indefinido
+        */
+
+
+        //TIPOS DE VARIÁVEIS
+            //boolean valor falso ou verdadeiro//
+            var a = true //(para fazer operadores lógicos)//
+            //undefined quando não se sabe o que tem na variável, pode ou não ter alguma coisa//
+            console.log()
+            //null a certeza de que não tem nada na variável//
+            var a = null //esvaziei a variável, não tem mais nenhum valor//
+            //Number é a variavel de um número//
+            console.log(7)
+            //String é uma cadeia de caracteres onde cada caracter é um elemento da cadeia//
+            console.log(1 + 1) //Igual a dois//
+            console.log("1" + "1") //Igual a onze (concatenado)//
+            console.log("abc" + "def") //Igual a abcdef//
+    </script>
+</body>
+</html>

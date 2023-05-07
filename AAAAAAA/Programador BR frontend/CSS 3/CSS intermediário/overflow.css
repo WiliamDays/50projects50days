@@ -1,0 +1,23 @@
+/*Sempre que desejar que o conteúdo fique delimitado a sua TAG pai, utiliza-se overflow*/
+#container{
+    background-color: blue;
+    color: yellow;
+    width: 300px;
+    height: 100px;
+}
+
+#container2{
+    background-color: blue;
+    color: yellow;
+    width: 300px;
+    height: 100px;
+    overflow-y: scroll
+}
+
+/*Tem o overflow hidden que esconde o conteúdo sobrando sem mostrar o que ta escrito, 
+tem o scoll que cria uma barra de rolagem dentro do espaço sem sobressair mas mostrando o conteúdo
+tem o scroll-x ou scroll-y que vai ter a mesma função, porém em apenas 1 sentido
+tem o visible que é o padrão com excesso do contéudo sendo jogado para fora do delimitado e sendo visivel enxergar
+tem o auto que vai colocar um scroll somente onde precisar, é como se usasse o scroll-x ou scroll-y automaticamente*/
+/*overflow-y utilizasse a estilização do overflow apenas de cima para baixo e de baixo para cima
+overflow-x utilizasse a estilização do overflow apenas da direita para esquerda e da esquerda para direita*/

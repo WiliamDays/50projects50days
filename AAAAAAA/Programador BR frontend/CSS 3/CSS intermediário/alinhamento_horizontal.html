@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta lang="Pt-BR">
+        <title>Ainhamento horizontal</title>
+        <style type="text/css">
+            body{
+                font-size: 1.2em;
+            }
+            #quadrado{
+                height: 50px;
+                width: 50px;
+                background-color: blue;
+                /*margin: auto;   ou
+                margin-left: auto;
+                margin-right: auto, gera um resultado de centralização horizontal, independente do tamanho da janela
+                (COM IMAGEM NÃO FUNCIONA)
+                somente margin-left: auto; vai ficar com elemento a direita independente do tamanho da janela
+                
+                Com imagem não funciona pois o display dela precisa ser block, caso você mude-a para display block, o margin: auto funcionará normalmente (ela nn funciona com display inline ou display inline-block)
+                mas e se eu quiser centralizar um elemento que precisa ser display inline?*/
+            }
+            #container{
+                text-align: center; /*seria uma forma mas teria que colocar a div na imagem e usar o atributo na div*/
+            }
+        </style>
+    </head>
+    <body>
+        <div id="quadrado">
+        
+        </div>
+        <div id="container">
+            <img src="file:///C:/Users/User/Desktop/Will/PROGRAMA%C3%87%C3%83O/Projeto%20glass%20Html%205/curso-html5-pacote01/projeto-glass-html5/_imagens/det-tela.jpg" alt="Homem de óculos">
+        </div>
+    </body>
+</html>

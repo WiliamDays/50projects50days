@@ -1,0 +1,31 @@
+|<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Json</title>
+</head>
+<body>
+    <script>
+        let Aluno = {
+            nome: "Wiliam", 
+            nota: 9.0
+        } 
+
+        let a2 = '{"nome": "Wiliam", "nota": 9.0}' //O JSON obrigatoriamente é criado com aspas simples e tudo que tiver dentro das chaves tem que ser com aspas duplas
+        //java script object notation
+        JSON.stringify() //Pega um objeto json e transforma em string
+        JSON.parse() //Pega uma string e transforma em um objeto json
+        let a = JSON.stringify(Aluno)
+        let Aluno2 = JSON.parse(a2) 
+
+        console.log(Aluno) //Aqui aparece como objeto
+        console.log(a) //Aqui aparece como "string" (JSON que tem um formatyto de string mas não é um objeto)
+        console.log(Aluno2) //Aqui vai aparecer como objeto
+        console.log(a2) //Aqui vai aparecer como "string" (JSON que tem um formatyto de string mas não é um objeto)
+
+
+    </script>    
+</body>
+</html>

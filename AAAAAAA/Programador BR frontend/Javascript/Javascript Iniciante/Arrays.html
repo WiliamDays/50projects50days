@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arrays</title>
+</head>
+<body>
+    <script>
+        //São conjuntos de dados agrupados em variáveis vizinhas
+        //var vetor = new Array() (cirei um array vazio)
+        var alunos = new Array("Lucas", "Mateus", "Wiliam")
+        console.log(alunos[2]) 
+        //var vetor = [] (criei um array vazio)
+        var alunas = ["Júlia", "Carol", "Mônica", "Karol", "Juliana"]
+        console.log(alunas.length)
+
+        //O interessante do vetor é que tem como varrer ele usando o for
+        var alunas = ["Júlia", "Carol", "Mônica", "Karol", "Juliana"]
+        for (i = 0; i< alunas.length; i++){
+            console.log(alunas[i])
+        }
+        /*uma forma simplificada para percorrer o array (Faz a mesma coisa que o for de cima)
+
+        for (i in alunas){
+            console.log([i]) vai pegar o index(A posição) então no array alunas: 0 até o ultimo index desse array
+            console.log(alunas[i]) vai pegar o valor de cada index e exibir percorrendo o vetor
+        } 
+
+        for (i of alunas){
+            console.log(i) vai pegar o valor do array alunas: seria Júlia Carol Mônica Karol Juliana (diferente do in que pega o index o of já pega o valor direto)
+        }
+        */
+    </script>
+</body>
+</html>

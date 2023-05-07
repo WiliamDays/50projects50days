@@ -1,0 +1,14 @@
+/*É responsável por dizer como cada elemento vai  ser mostrado em tela*/
+/*Cada elemento vem com um display padrão, não necessariamente o mesmo*/
+/*Tipos de display: 
+display none = o codigo continua la, mas é como se o codigo não existisse visualmente
+display inline = apos escreve o elemento e passar para o proximo ele continuara junto com anterior, na mesma linha, como por exemplo o span
+display block = apos escrever o elemento ele passará para proxima linha quando começar a escrever outro independente se tem ou não espaço na linha, por exemplo o paragráfo e a div 
+display inline-block = mantém as caracteristicas  do display inline, porém com ela é possível mudar altura e largura como no exemplo id 1 e id 2*/
+
+/*No display inline não é possível modificar nem a altura nem a largura do elemento, já no block é possível*/
+
+/*Nunca se pode usar um elemento do tipo block dentro de um paragráfo, então a gente não pode colocar uma div dentro de um paragráfo, nem um paragráfo dentro de um paragráfo, se não há uma quebrando fluxo do paragráfo como no id quebra do fluxo do paragrafo*/
+
+/*obs: o atributo visibility serve igual o display none porem o espaço do codigo continua existindo, so nn vai aparecer o codigo, enquanto o none é como se o codigo não existisse*/
+

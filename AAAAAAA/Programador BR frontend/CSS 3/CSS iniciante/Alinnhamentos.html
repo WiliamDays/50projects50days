@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alinhamento horizontal e vertical</title>
+    <style>
+        #minhaDiv{
+            height: 100px;
+            width: 100px;
+            background-color: blue;
+            /*
+            Não funciona com imagens (se colocar um div na imagem e usar text align centraliza), funciona com divs e parágrafos
+            margin-right: auto; (joga o elemento o máximo para esquerda)
+            margin-left: auto; (joga o elemento o máximo para direita)
+            margin: auto; (joga o elemento para o meio)
+            */
+            margin: auto; /*(joga o elemento para o meio)*/
+        }
+
+        p{
+            width: 400px;
+            margin-left: auto;
+            margin-right: auto;
+            text-align: center;
+            /*Se usar so márgin auto centraliza em relação ao eixo x e y*/
+        }
+    </style>
+</head>
+<body>
+    <div id="minhaDiv">
+
+    </div>
+    <p>
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nemo quo omnis velit autem consectetur sequi, recusandae minus sit. Adipisci quos quis aspernatur dolores veritatis, possimus aliquid assumenda optio fuga sed!
+    </p>
+    <img src="../CSS intermediário/zipImagemprogramming.jpg" alt="imagem programa">
+</body>
+</html>

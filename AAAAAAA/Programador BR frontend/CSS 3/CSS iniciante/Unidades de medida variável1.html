@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Unidades de medida variável</title>
+        <style>
+            /*EM*/
+            /*O tamanho do texto dentro do body é 16px pois ele não sofreu nenhuma alteração*/
+            .container {
+                font-size: 20px;
+
+                width: 300px;
+                background-color: blue;
+            }
+            .inside {
+                font-size: 1em;
+                
+                width: 1em;
+                background-color: red;
+            }
+            /*no caso da propriedade font size, como o inside está dentro do container o inside herdou as caracteristicas do elemento container, então 1 em será 20px pq é 1 vez o tamanho do elemento, 2em seria 40px*/
+            /*a unidade de medida em, sempre será medida em relação ao tamanho da fonte do elemento (em pixel), mesmo que usada para um background, ou outros fins...*/
+            /* O tamanho padrão da fonte, sem alterações é 16px*/
+
+            /*REM*/
+            .container2 {
+                font-size: 20px;
+
+                width: 300px;
+                background-color: blue;
+            }
+            .inside2 {
+                font-size: 1rem;
+                
+                width: 1rem;
+                background-color: red;
+            }
+            /*Com o rem o tamanho vai ficar em relação ao elemento raiz ou seja o valor do html nesse caso*/
+
+            /*VW*/
+            .container3 {
+                font-size: 20px;
+
+                width: 300px;
+                background-color: blue;
+            }
+            .inside3 {
+                font-size: 10px;
+                
+                width: 10vw;
+                background-color: red;
+            }
+            /*1vw é igual a 1% do valor do tamanho da largura da janela do navegador*/
+
+            /*VH*/
+            .container4 {
+                font-size: 20px;
+
+                width: 300px;
+                background-color: blue;
+            }
+            .inside4 {
+                font-size: 10px;
+                
+                width: 1vh;
+                background-color: red;
+            }
+            /*Um vh é igual a 1% da medida da altura da janela/
+
+            /*VMIN*/
+            .container5 {
+                font-size: 20px;
+
+                width: 300px;
+                background-color: blue;
+            }
+            .inside5 {
+                font-size: 10px;
+                
+                width: 1vmin;
+                background-color: red;
+            }
+            /*Um vmin é igual a 1% da medida do menor valor (ou altura ou largura da janela, se a altura estiver menor vai ser em relação a altura, se a largura estiver menor vai ser em relação a largura)
+
+            /*VMAX*/
+            .container6 {
+                font-size: 20px;
+
+                width: 300px;
+                background-color: blue;
+            }
+            .inside6 {
+                font-size: 10px;
+                
+                width: 1vmax;
+                background-color: red;
+            }
+            /*Um vmax é igual a 1% da medida do maior valor (ou altura ou largura da janela, se a altura estiver maior, vai ser em relação a altura, se a largura estiver maior vai ser em relação a largura)
+
+            /*%*/
+            .container7 {
+                font-size: 80%;
+
+                width: 300px;
+                background-color: blue;
+            }
+            .inside7 {
+                font-size: 10px;
+                
+                width: 70%;
+                background-color: red;
+            }
+            /*Um % é igual a 1% da medida do valor do elemento pai (ou seja o container vai ter 80% da medida do elemento pai (body), e o inside vai ter 70% da medida da tag pai (container)), entao o inside vai ter 70% de 80% do elemento body*/
+        </style>
+    </head>
+    <body>
+        Texto dentro do body       
+        <div class = 'container'>
+            Texto dentro do container
+            <div class = 'inside'>
+                Texto dentro do inside
+            </div>
+        </div>
+        <br><br><br><br>
+        Texto dentro do body       
+        <div class = 'container2'>
+            Texto dentro do container
+            <div class = 'inside2'>
+                Texto dentro do inside
+            </div>
+        </div>
+        <br><br><br><br>
+        Texto dentro do body       
+        <div class = 'container3'>
+            Texto dentro do container
+            <div class = 'inside3'>
+                Texto dentro do inside
+            </div>
+        </div>
+        <br><br><br><br>
+        Texto dentro do body       
+        <div class = 'container4'>
+            Texto dentro do container
+            <div class = 'inside4'>
+                Texto dentro do inside
+            </div>
+        </div>
+        <br><br><br><br>
+        Texto dentro do body       
+        <div class = 'container5'>
+            Texto dentro do container
+            <div class = 'inside5'>
+                Texto dentro do inside
+            </div>
+        </div>
+        <br><br><br><br>
+        Texto dentro do body       
+        <div class = 'container6'>
+            Texto dentro do container
+            <div class = 'inside6'>
+                Texto dentro do inside
+            </div>
+        </div>
+        <br><br><br><br>
+        Texto dentro do body       
+        <div class = 'container7'>
+            Texto dentro do container
+            <div class = 'inside7'>
+                Texto dentro do inside
+            </div>
+        </div>
+    </body>
+</html>

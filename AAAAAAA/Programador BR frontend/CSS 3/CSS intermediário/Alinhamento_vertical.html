@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta lang="Pt-BR">
+        <title>Alinhamento vertical</title>
+        <style>
+            .card{
+                float: left;
+                width: 400px;
+                height: 200px;
+                border: 2px solid green;
+                text-align: center;
+                position: relative;
+            }
+            .c1{
+                line-height: 200px; /* (Primeira forma)dessa forma daria para eu centralizar verticalmente, porém eu teria que calcular o valor da altura do pai e do elemento*/
+            }
+            
+            .c2{
+                /*segunda forma é com posicionamento absoluto*/
+                position: absolute;
+                top: 50%;
+                left: 50%; /*Com 50 a 50% deu uma diferençazinha então precisa ajustá-la com transform translate tanto no eixox quanto y*/
+                transform: translatex(-50%) translatey(-50%); /*Ou transform:translate: (-50% do x, -50% do y);*/
+            }
+            .card2{
+                clear: left; /*Impedir que apareça conteúdo a esquerda do elemento*/
+                border: 2px solid green;
+                float: left;
+                padding-left: 150px;
+                padding-right: 150px;
+                padding-top: 100px;
+                padding-bottom: 100px; /*dessa forma fica mais difícil de definir qual tamanho o elemento ficará*/
+            }
+        </style>
+    </head>
+    <body>
+        <div class="card">
+            <div class="c1">
+                Wiliam Pereira Dias
+             </div>
+        </div>
+        <div class="card">
+            <div class="c2">
+                Wiliam Pereira Dias
+            </div>
+        </div>
+        <div>
+            <div class="card2">
+                Wiliam Pereira Dias
+            </div>
+        </div>
+    </body>
+</html>

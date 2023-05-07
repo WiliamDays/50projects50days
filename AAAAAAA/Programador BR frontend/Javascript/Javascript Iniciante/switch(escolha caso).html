@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Switch</title>
+</head>
+<body>
+    <script>    
+        var nota1 = 5.0
+        var nota2 = 5.8
+        var media = ((nota1 + nota2)/ 2)
+        var conceito = ""
+        if (conceito>=8){
+            conceito = "ótimo"
+        }
+        else if (conceito > 7){
+            conceito = "Bom"
+        }
+        else if (conceito > 6){
+            conceito = "Regular" 
+        }
+        else{
+            conceito = "Ruim"
+        }
+
+        switch(conceito){
+            case "ótimo":
+                console.log("Você é um aluno lendário")
+                break;
+            case "Bom":
+                console.log("Você está no caminho do sucesso")
+                break;
+            case "Regular":
+                console.log("Você tá na média")
+                break;
+            case "Ruim":
+                console.log("Você é um péssimo aluno")
+                break;
+            default:
+                console.log("Opção não encontrada")
+                break;
+        }
+    </script>
+
+</body>
+</html>
+
+

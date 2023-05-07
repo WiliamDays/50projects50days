@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Strings</title>
+</head>
+<body>
+    <script>
+        //Strings
+        var aspas = "quando quero colocar alguma coisa entre 'aspas' eu uso a oposta do lado de fora";
+
+
+        var numero = 8 /*No console aparece em azul enquanto a string aparece em preto */
+        var number = "8" /*Se a string for apenas um número como nesse caso o js converte para numero quando coloca algum operador e realiza a operação, mas se fosse 8a por exemplo, já não faria essa conversão. (daria NaN)*/ 
+        var str = "valor qualquer";
+        console.log(str);
+        str += " outro texto " + numero /*concatenou*/
+        console.log(str) /*A única opereção que é possível usar com uma string é o + para concatenar, se usar com outra string aparece o erro NaN (not a number)*/
+
+        var n1 = "7,5"
+        var n2 = 9
+        var n3 = "7"
+        tot = n1 + n2 + n3 
+
+        //Como tem strings vai concatenar, caso eu quisesse somar mesmo sendo string teria que fazer
+        tot = parsefloat(n1) + n2 + parseint(n3) //passar para real e passar para inteiro
+    </script>
+</body>
+</html>

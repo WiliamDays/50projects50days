@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Overflow</title>
+    <style>
+        .card {
+            background-color: #ccc;
+            width: 300px;
+            height: 300px;
+            /*Não vaza conteúdo mas não é possível ver todo conteúdo 
+            overflow: hidden;
+            */
+            /*Não vaza conteúdo mas é possível ver todo conteúdo atraves do scroll*/
+            overflow: scroll;
+
+            /*É possível manipular o overflow no eixo x e y do forma separada com valores diferentes*/
+
+        }
+
+        .lorem {
+            font-size: 20px;
+        }
+    </style>
+</head>
+<body>    
+    <div class="card">
+        <p class="lorem">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Culpa omnis vero aut dicta sed obcaecati atque officia blanditiis fuga enim et aliquid facilis, nisi eaque, ipsam dolore quisquam dolorum aliquam.
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Debitis odio ipsa nisi sed necessitatibus numquam vel enim temporibus deserunt perspiciatis dolores ipsum ab et, eligendi ut esse harum saepe totam!
+            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Perferendis, exercitationem error neque ullam inventore sint distinctio voluptatibus nihil. Perferendis unde non neque ea illo cumque voluptatum quidem aliquam, quod ipsam?
+        </p>
+    </div>  
+    <h1>Outro tópico</h1> 
+</body>
+</html>

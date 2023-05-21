@@ -56,10 +56,29 @@
         contexto.lineWidth = 4 //Aumenta a expessura da linha (precisa ser antes do stroke)
         contexto.stroke() //Cria expessura da linha que está sendo desenhada
 
+
+
         //Como desenhar um retângulo
         const contexto2 = tela2.getContext("2d")
+        //Criando um retagulo preenchido
         contexto2.fillstyle = "blue" //Definir a cor do retângulo
-        contexto2.fillRect()
+        contexto2.fillRect(10, 10, 100, 200 ) //(distamciamento da borda no eixo X, distanciamento da borda no eixo Y, width, height)
+        //Criando um retângulo sem preenchimento interno
+        contexto2.strokeStyle = "red"
+        contexto2.strokeRect(120, 10, 100, 200)
+        
+        //Criando o retângulo com borda e preenchimento interno
+        contexto2.rect(230, 10, 100, 200)
+        contexto2.fillStyle = "blue"
+        contexto2.strokeStyle = "red"
+        
+        contexto2.fill()
+        contexto2.stroke()
+        
+        contexto2.clearRect(250, 20, 30, 30) //Criou um fundo vazio dentro do quadrado
+
+
+        //Inicio e fim do caminho
         
 
 

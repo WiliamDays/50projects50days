@@ -9,24 +9,61 @@
         #tela1{
             background-color: aqua;
         }
+
+        #tela2{
+            background-color: beige;
+        }
+
+        #tela3{
+            background-color: gray;
+        }
+
+        #tela4{
+            background-color: greenyellow;
+        }
+
     </style>
 </head>
 <body>
     <canvas id="tela1" width="400px" height="400px"> <!--Todo canvas precisa ter seu id, width e height e uma color-->
-
+    <!--É de extrema importância sempre definir width e height na no atributo tag canvas se não da diferença no desenho/ -->
     </canvas><!--Tela usada para poder desenhar e animar-->
 
-    <script>
-        let tela = document.getElementById("tela1")
-        //Como desenhar uma linha
 
-        let contexto = tela.getContext("2d") //Pegou o espaço desenhavel 
+    <canvas id="tela2" width="400px" height="400px"> 
+
+    </canvas>
+
+
+    <canvas id="tela3" width="400px" height="400px"> 
+
+    </canvas>
+
+    <canvas id="tela4" width="400px" height="400px"> 
+    </canvas>
+
+    <script>
+        let tela1 = document.getElementById("tela1")
+        let tela2 = document.getElementById("tela2")
+        let tela3 = document.getElementById("tela3")
+        let tela4 = document.getElementById("tela4")
+        //Como desenhar uma linha
+        const contexto = tela1.getContext("2d") //Pegou o espaço desenhavel 
         contexto.moveTo(0, 0) //Como se tivesse um pincel e fosse mover ele para essa posição (e deixar lá)
-        contexto.lineTo(250, 250) //Para onde vai mover apatir do ponto do nmoveto
-        contexto.lineTo(500, 0)
-        contexto.strokeStyle = "black" //Muda a cor da linha
+        contexto.lineTo(200, 200) //Para onde vai mover apatir do ponto do nmoveto
+        contexto.lineTo(400, 0)
+        contexto.strokeStyle = "red" //Muda a cor da linha
         contexto.lineWidth = 4 //Aumenta a expessura da linha (precisa ser antes do stroke)
-        contexto.stroke //Cria expessura da linha que está sendo desenhada
+        contexto.stroke() //Cria expessura da linha que está sendo desenhada
+
+        //Como desenhar um retângulo
+        const contexto2 = tela2.getContext("2d")
+        contexto2.fillstyle = "blue" //Definir a cor do retângulo
+        contexto2.fillRect()
+        
+
+
+
 
     </script>
 </body>

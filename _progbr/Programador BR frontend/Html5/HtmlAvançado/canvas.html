@@ -66,7 +66,6 @@
         //Criando um retângulo sem preenchimento interno
         contexto2.strokeStyle = "red"
         contexto2.strokeRect(120, 10, 100, 200)
-        
         //Criando o retângulo com borda e preenchimento interno
         contexto2.rect(230, 10, 100, 200)
         contexto2.fillStyle = "blue"
@@ -78,8 +77,20 @@
         contexto2.clearRect(250, 20, 30, 30) //Criou um fundo vazio dentro do quadrado
 
 
-        //Inicio e fim do caminho
-        
+        //Criando um circulo
+        const contexto3 = tela3.getContext("2d")
+
+        let x = 150 //Valor da ponta do container ao cento da circulo (no eixo x)
+        let y = 120 //Valor da ponta do container ao cento da circulo (no eixo x)
+        let raio = 50 //O valor do raio
+        let inicio = 0 //O valor do inicio do desenho da circunferência em pi rad 
+        let fim = 2 * Math.PI //O valor do final do desenho da circunferência em pi rad
+
+        contexto3.beginPath() //Sempre que for criar uma nova animação canva é bom colocar para representar um novo caminho que será feito (desenhado)
+        contexto3.strokeStyle = "red";
+
+        contexto3.arc(x, y, raio, inicio, fim)//Dava para fazer com os valores dentro do parenteses
+        contexto3.stroke()
 
 
 

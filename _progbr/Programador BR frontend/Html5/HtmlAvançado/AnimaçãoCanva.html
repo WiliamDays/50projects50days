@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animação canva</title>
+    <style>
+        #tela1{
+            background-color: aqua;
+        }
+
+    </style>
+</head>
+<body>
+    <canvas id="tela1" width="400px" height="400px"> <!--Todo canvas precisa ter seu id, width e height e uma color-->
+        <!--É de extrema importância sempre definir width e height na no atributo tag canvas se não da diferença no desenho/ -->
+    </canvas><!--Tela usada para poder desenhar e animar-->
+    
+    <script>
+        let tela1 = document.getElementById("tela1")
+
+        let contexto = tela1.getContext("2d")
+
+        let circle = {
+            x: 100,
+            y: 250,
+            raio: 100,
+            inicio: 0,
+            fim: 1 * Math.PI
+        }
+
+
+        function circuloDesenhado(c){
+
+            contexto.beginPath()
+            contexto.strokeStyle = "red"
+            contexto.fillStyle = "blue"
+            contexto.arc(contexto.x, contexto.y, contexto.raio, contexto.inicio, contexto.fim)
+
+            contexto.fill()
+            contexto.stroke()
+        }
+
+        circuloDesenhado(circle)
+
+    </script>
+</body>
+</html>

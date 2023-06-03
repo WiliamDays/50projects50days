@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Animação canva</title>
+    <title>Animação canva e imagem no canva</title>
     <style>
         #tela1{
             background-color: aqua;
@@ -23,26 +23,43 @@
         let contexto = tela1.getContext("2d")
 
         let circle = {
-            x: 100,
-            y: 250,
+            x: 200,
+            y: 150,
             raio: 100,
             inicio: 0,
-            fim: 1 * Math.PI
+            fim: 0,
+            antiHor: true, //Propriedade que faz a animação fazer movimento contrário (se for false faz o movimento normal)
         }
 
 
         function circuloDesenhado(c){
 
             contexto.beginPath()
+            contexto.rect(0,0, 500, 500)
+            contexto.fillStyle= "aqua"
+            contexto.fill()
+
+
+
+            contexto.beginPath()
             contexto.strokeStyle = "red"
             contexto.fillStyle = "blue"
-            contexto.arc(contexto.x, contexto.y, contexto.raio, contexto.inicio, contexto.fim)
+            contexto.arc(c.x, c.y, c.raio, c.inicio, c.fim, c.antiHor)
 
             contexto.fill()
             contexto.stroke()
         }
 
-        circuloDesenhado(circle)
+        setInterval(function() {
+
+            if(circle.fim < 2* Math.PI) {
+                circle.fim += 1 //Criando a animação com circulo
+                circle.x += 2 //Aumentando a distância do círculo no eixo x
+
+            }
+
+            circuloDesenhado(circle)
+        }, 1000) 
 
     </script>
 </body>

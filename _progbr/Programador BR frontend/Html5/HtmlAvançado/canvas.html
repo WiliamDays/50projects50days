@@ -93,6 +93,28 @@
         contexto3.stroke()
 
 
+        //Manipulando uma imagem no canva
+        const contexto4 = tela4.getContext("2d")
+        
+        let img = new Image()
+        img.src = "https://s2.glbimg.com/m5VjqU_ldJcwBQ2GOqIxPNUD9a8=/0x0:620x465/984x0/smart/filters:strip_icc()/i.s3.glbimg.com/v1/AUTH_08fbf48bc0524877943fe86e43087e7a/internal_photos/bs/2021/Z/v/vL68NTRMyL2ttQPB8voQ/2012-03-28-foto-1.jpg"
+
+        img.onload = desenharImg
+
+        function desenharImg() {
+
+            contexto4.drawImage(this, 20, 20, 320, 320) //this que no caso é a imagem, distancia eixo x, distância eixo y, tamanho width, tamanho height 
+        
+
+            //Observação: se no lugar das medidas do width e height da imagem eu passasse this.naturalWidth/2, this.naturalHeight / 2, vai passar valores que vai diminuir pela metade a altura e largura em relação ao seu tamanho original
+        }
+
+      
+
+
+     
+
+
 
 
     </script>

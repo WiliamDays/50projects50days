@@ -15,28 +15,64 @@
             Nesse caso o estilo que estiver nesse bloco vai ser aplicável a todas divs e todos headers
         }
 
-        div p{
-            Nesse caso o estilo vai aplicar somente nos paragráfos que estiverem dentro de uma div (Nesse caso na div de baixo)
+        #nome p{
+            Nesse caso o estilo vai aplicar somente nos paragráfos que estiverem dentro de uma div, como se fosse em cascata (Nesse caso na div de baixo)
         }
+
+        #nome > p{
+            Nesse caso o estilo vai aplicar somente nos alementos p que op elemento pai é a id nome, (esse caso é diferente do de cima pois no de cima elemento avo tmb engloba, já nesse não)
+        }
+
+        div + header {
+            Esse vai selecionar o primeiro elemento header que estiver logo após a div (caso é o header do meio que está logo após a div)
+        }
+
+        div ~ header {
+            Vai pegar todos elementos header que SUCEDAM o elemento div (independente se é filho ou neto)
+        }
+
+        [width] {
+            Esse seleciona o elemento pelo atributo (no caso todos os width, se fosse de um tamanho especifico teria que usar [width="500"] não pode ter espaço no valor e tem que usar aspas)
+        }
+
+        [title~="titulo"]{
+            Vai pegar tanto o titulo 1 quanto o titulo 2
+        }
+
+        [title^="t"]{
+            Vai pegar tanto o titulo 1 quanto o titulo 2 quanto o texto 1, agora se usasse "ti" pegaria somente o titulo 1 e titulo 2
+        }
+
+        [title$="1"]{
+            Vai pegar o titulo 1 e o texto 1 (pelos dois terminarem em 1)
+        }
+
+        [title*="tu"]{
+            Vai pegar o titulo 1 e titulo 2 e tutu por eles terem tu em uma parte
+        }
+
+
+
+        pode misturar para elaborar os seletores, classes, ids, tags etc.
     -->
     <div>
-        <h1>Título 1</h1>
-        <h1>Título 2</h1>
-        <h1>Título 3</h1>
-        selecionad
-        
+        <h1 title="titulo 1">Título 1</h1>
+        <h1 title="titulo 2">Título 2</h1>
+        <h1>Título 3</h1>        
             <h1>Título 4</h1>
-            <h1>Título 5</h1>
-            <h1>Título 6</h1>
+            <h1 title="tutu">Título 5</h1>
+            <h1 title="texto 1">Título 6</h1>
     </div>
+
+    <ps>
 
     <header>
         <p>Parágrafo 1</p>
         <p class="p2">Parágrafo 2</p>
         <p>Parágrafo 3</p>
-        <p>Parágrafo 4</p>
+        <p 4 width="300px">Parágrafo</p>
         <p>Parágrafo 5</p>
-        <p>Parágrafo 6</p>
+        <p width="500px">Parágrafo 6</p>
     </header>
 
     <div>
@@ -48,5 +84,10 @@
         <p>Parágrafo 6</p>
     </div>
 
+    <script>
+        //Tem como pegar o elemento por todos os seletores mostrados acima
+        let titulos = document.querySelector("[title]") //Vai pegar o PRIMEIRO elemento do html que tem o title
+        let todosTitulos = document.querySelectorall("[title]*=tu") //Vai pegar o TODOS elemento do html que é tittle e tem o tu em alguma parte do valor 
+    </script>
 </body>
 </html>

@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pseudo classes</title>
+    <style>
+        /*pseudo elementos possue :: e pseudo calsses possue :*/
+        input:focus{
+            color: red; /*Vai fazer com que o elemento selecionado (só o que está em foco) no input passe pela estilização*/
+        }
+
+        li:first-child{
+            color: blue; /*Somente para o primeiro filho do elemento, contando outros tipos de tag além do li*/
+        }
+
+        li:first-of-type{
+            color: blue; /*Somente para o primeiro li, independente do tipo se tiver outra tag acima*/
+        }
+
+        li:nth-child(3){
+            color: blue; /*Somente para o terceiro filho do elemento, contando outros tipos de tag além do li*/
+        }
+
+        li:nth-of-type(3){
+            color: blue; /*Somente para o terceiro li independente do tipo que estiver na tag acima */
+        }
+
+        li:nth-last-child(3){
+            color: blue; /*Somente para o terceiro filho do ultimo elemento para o primeiro elemento, (contando outros tipos de elementos além do li)*/
+        }
+
+        li:nth-last-of-type(3){
+            color: blue; /*Somente para o terceiro li independente do tipo que estiver acima ou abaixo*/
+        }
+
+        li:nth-of-type(3n){
+            color: blue; /*Somente todos elementos que forem irmão e divisiveis por 3 */
+        }
+
+        li:nth-of-type(3n - 1){
+            /*Vai contar o estilo para o elemento de numero 2, 5, 8, 11, 14...*/
+        }
+
+        li:nth-of-type(odd){
+            /*Vai contar o estilo para o elemento de numero impar (even no lugar de odd se for par)*/
+        }
+    </style>
+</head>
+<body>
+    
+    <input type="text">
+    <input type="text">
+
+    <ul>
+        <li>Item 1</li>
+        <li>Item 2</li>
+        <li>Item 3</li>
+        <li>Item 4</li>
+        <li>Item 5</li>
+    </ul>
+
+    <script>
+
+    </script>
+</body>
+</html>

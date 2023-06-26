@@ -5,7 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Flexbox</title>
     <style>
-        .container{
+        /*Flex-direction*/
+        .containerflexdirection{
             background-color: darkgray;
             height: 400px;
             color: white;
@@ -25,13 +26,48 @@
             background-color: green;
         }
 
-        
-
-        /*Flex-direction*/
-
         /*Wrap*/
+        .containerflexWrap{
+            background-color: darkgray;
+            height: 400px;
+            color: white;
+            display: flex;
+            flex-direction: column; /*O padrão é row (coluna), no column (column) o elemento vai ocupar o máximo possível na horizontal, temos tmb o row-reverse que ai ocupar de baixo para cima e o column-reverse vai ocupar da direita para esquerda.no row vai ocupar o máximo possível na vertícal (assim como a div faz) se forçar colando width e height não preenche tudo*/
+            flex-wrap: nowrap; /*Com a opção nowrap quando a janela diminuir a tendencia é manter o layout mesmo diminuindo o tamanho do elemento (não mantendo o width expresso), com o wrap mantém o tamanho do elemento havendo quebra caso a janela diminua e no caso do wrap reverse já o wrap-reverse inverte a linha ou as coluna*/
+        }
+
+        .r1{
+            background-color: red;
+        }
+
+        .r2{
+            background-color: blue;
+        }
+
+        .r3{
+            background-color: green;
+        }
 
         /*Flex flow*/
+        .containerflexflow{
+            background-color: darkgray;
+            height: 400px;
+            color: white;
+            display: flex;
+            flex-flow: column-reverse wrap-reverse/*Com o flex-flow eu posso disponibilizar os dois estilos (direction e wrap) em uma linha só*/
+        }
+
+        .r1{
+            background-color: red;
+        }
+
+        .r2{
+            background-color: blue;
+        }
+
+        .r3{
+            background-color: green;
+        }
 
         /*Justify content + Align Items*/
 
@@ -45,7 +81,49 @@
     </style>
 </head>
 <body>
-    <div class="container">
+    <div class="containerFlexDirection">
+        <div class="rect r1">1</div>
+        <div class="rect r2">2</div>
+        <div class="rect r3">3</div>    
+    </div>
+
+    <div class="containerFlexWrap">
+        <div class="rect r1">1</div>
+        <div class="rect r2">2</div>
+        <div class="rect r3">3</div>    
+    </div>
+
+    <div class="containerFlexflow">
+        <div class="rect r1">1</div>
+        <div class="rect r2">2</div>
+        <div class="rect r3">3</div>    
+    </div>
+
+    <div class="containerJustifyContentAlignItens">
+        <div class="rect r1">1</div>
+        <div class="rect r2">2</div>
+        <div class="rect r3">3</div>    
+    </div>
+
+    <div class="containeralignContent">
+        <div class="rect r1">1</div>
+        <div class="rect r2">2</div>
+        <div class="rect r3">3</div>    
+    </div>
+
+    <div class="containerGrowShrink">
+        <div class="rect r1">1</div>
+        <div class="rect r2">2</div>
+        <div class="rect r3">3</div>    
+    </div>
+
+    <div class="containerOrdem">
+        <div class="rect r1">1</div>
+        <div class="rect r2">2</div>
+        <div class="rect r3">3</div>    
+    </div>
+
+    <div class="containeralignSelf">
         <div class="rect r1">1</div>
         <div class="rect r2">2</div>
         <div class="rect r3">3</div>    

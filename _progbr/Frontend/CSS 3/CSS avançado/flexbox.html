@@ -6,11 +6,17 @@
     <title>Flexbox</title>
     <style>
         /*Flex-direction*/
+        .container{
+            display: flex;
+            width: 80%;
+            height: 80%;
+            background-color: slateblue;
+        }
+
         .containerflexdirection{
             background-color: darkgray;
             height: 400px;
             color: white;
-            display: flex;
             flex-direction: column; /*O padrão é row (coluna), no column (column) o elemento vai ocupar o máximo possível na horizontal, temos tmb o row-reverse que ai ocupar de baixo para cima e o column-reverse vai ocupar da direita para esquerda.no row vai ocupar o máximo possível na vertícal (assim como a div faz) se forçar colando width e height não preenche tudo*/
         }
 
@@ -31,7 +37,6 @@
             background-color: darkgray;
             height: 400px;
             color: white;
-            display: flex;
             flex-direction: column; /*O padrão é row (coluna), no column (column) o elemento vai ocupar o máximo possível na horizontal, temos tmb o row-reverse que ai ocupar de baixo para cima e o column-reverse vai ocupar da direita para esquerda.no row vai ocupar o máximo possível na vertícal (assim como a div faz) se forçar colando width e height não preenche tudo*/
             flex-wrap: nowrap; /*Com a opção nowrap quando a janela diminuir a tendencia é manter o layout mesmo diminuindo o tamanho do elemento (não mantendo o width expresso), com o wrap mantém o tamanho do elemento havendo quebra caso a janela diminua e no caso do wrap reverse já o wrap-reverse inverte a linha ou as coluna*/
         }
@@ -53,8 +58,7 @@
             background-color: darkgray;
             height: 400px;
             color: white;
-            display: flex;
-            flex-flow: column-reverse wrap-reverse/*Com o flex-flow eu posso disponibilizar os dois estilos (direction e wrap) em uma linha só*/
+            flex-flow: column-reverse wrap-reverse;/*Com o flex-flow eu posso disponibilizar os dois estilos (direction e wrap) em uma linha só*/
         }
 
         .r1{
@@ -70,8 +74,45 @@
         }
 
         /*Justify content + Align Items*/
+        .containercontainerJustifyContentAlignItens{
+            background-color: darkgray;
+            height: 400px;
+            color: white;
+            justify-content: flex-end;/*Flex start é o padrão, com o flex end vai para o final do eixo principal que é determinado pelo flex-direction, center vai para o meio. Já o flex-beetwen faz um espaço igual entre os elementos irmão e o espace around que é o espaço em volta entre os elementos contando até as bordas. space-evenly, mantém um mesmo espaço distribuido na direção row ou colunm. */
+            align-items: center; /*O padrão do align-itens é stretch (esticado), mas ele pussue os mesmos valores do justify content (ambos são em relação ao eixo principal definido pelo flex direction)*/
+        }
+
+        .r1{
+            background-color: red;
+        }
+
+        .r2{
+            background-color: blue;
+        }
+
+        .r3{
+            background-color: green;
+        }
 
         /*Align content*/
+        .containeralignContent{
+            background-color: darkgray;
+            height: 400px;
+            color: white;
+            flex-flow: column-reverse wrap-reverse;/*Com o flex-flow eu posso disponibilizar os dois estilos (direction e wrap) em uma linha só*/
+        }
+
+        .r1{
+            background-color: red;
+        }
+
+        .r2{
+            background-color: blue;
+        }
+
+        .r3{
+            background-color: green;
+        }
 
         /*Grow/Shrink*/
 
@@ -81,54 +122,55 @@
     </style>
 </head>
 <body>
-    <div class="containerFlexDirection">
-        <div class="rect r1">1</div>
-        <div class="rect r2">2</div>
-        <div class="rect r3">3</div>    
-    </div>
+    <main class="container">
+        <div class="containerFlexDirection">
+            <div class="rect r1">1</div>
+            <div class="rect r2">2</div>
+            <div class="rect r3">3</div>    
+        </div>
 
-    <div class="containerFlexWrap">
-        <div class="rect r1">1</div>
-        <div class="rect r2">2</div>
-        <div class="rect r3">3</div>    
-    </div>
+        <div class="containerFlexWrap">
+            <div class="rect r1">1</div>
+            <div class="rect r2">2</div>
+            <div class="rect r3">3</div>    
+        </div>
 
-    <div class="containerFlexflow">
-        <div class="rect r1">1</div>
-        <div class="rect r2">2</div>
-        <div class="rect r3">3</div>    
-    </div>
+        <div class="containerFlexflow">
+            <div class="rect r1">1</div>
+            <div class="rect r2">2</div>
+            <div class="rect r3">3</div>    
+        </div>
 
-    <div class="containerJustifyContentAlignItens">
-        <div class="rect r1">1</div>
-        <div class="rect r2">2</div>
-        <div class="rect r3">3</div>    
-    </div>
+        <div class="containerJustifyContentAlignItens">
+            <div class="rect r1">1</div>
+            <div class="rect r2">2</div>
+            <div class="rect r3">3</div>    
+        </div>
 
-    <div class="containeralignContent">
-        <div class="rect r1">1</div>
-        <div class="rect r2">2</div>
-        <div class="rect r3">3</div>    
-    </div>
+        <div class="containeralignContent">
+            <div class="rect r1">1</div>
+            <div class="rect r2">2</div>
+            <div class="rect r3">3</div>    
+        </div>
 
-    <div class="containerGrowShrink">
-        <div class="rect r1">1</div>
-        <div class="rect r2">2</div>
-        <div class="rect r3">3</div>    
-    </div>
+        <div class="containerGrowShrink">
+            <div class="rect r1">1</div>
+            <div class="rect r2">2</div>
+            <div class="rect r3">3</div>    
+        </div>
 
-    <div class="containerOrdem">
-        <div class="rect r1">1</div>
-        <div class="rect r2">2</div>
-        <div class="rect r3">3</div>    
-    </div>
+        <div class="containerOrdem">
+            <div class="rect r1">1</div>
+            <div class="rect r2">2</div>
+            <div class="rect r3">3</div>    
+        </div>
 
-    <div class="containeralignSelf">
-        <div class="rect r1">1</div>
-        <div class="rect r2">2</div>
-        <div class="rect r3">3</div>    
-    </div>
-
+        <div class="containeralignSelf">
+            <div class="rect r1">1</div>
+            <div class="rect r2">2</div>
+            <div class="rect r3">3</div>    
+        </div>
+    </main>
     <!--A proposta do flexbox é criar um design que seja flexível para qualquer tipo de tela-->
 </body>
 </html>
